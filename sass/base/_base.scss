@@ -1,0 +1,70 @@
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+
+	//	overflow: overlay;
+}
+
+.html-no-scroll {
+	overflow: hidden;
+}
+
+body {
+	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	//overflow: overlay;
+	//overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: 1280px;
+	padding: 80px 40px 100px;
+	margin: 0 auto;
+	//overflow: overlay;
+	//overflow-x: hidden;
+
+	@include media-laptop {
+		padding: 80px 30px 100px;
+		margin: 0 auto;
+	}
+}
+
+h1 {
+	@include font('Georgia', normal, 3.2rem, 3.5rem, 2px);
+	color: $color-primary;
+	text-align: left;
+}
+
+h2 {
+	@include font('Georgia', normal, 4.4rem, 5.72rem, 0px);
+	color: $color-light-xl;
+
+	@include media-tablet {
+		text-align: center;
+	}
+
+	@include media-random(500px) {
+		@include font('Georgia', normal, 2.5rem, 130%, 0.15rem);
+
+	}
+}
+
+h3 {
+	@include font('Georgia', normal, 3.5rem, 4.5rem, 0.05em);
+	color: $color-dark-l;
+
+	@include media-tablet {
+		text-align: center;
+	}
+
+	@include media-random(500px) {
+		@include font('Georgia', normal, 2.5rem, 130%, 0.05em);
+	}
+
+}
+
+*:hover {
+	transition: all 0.5s;
+}

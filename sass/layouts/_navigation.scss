@@ -1,0 +1,34 @@
+.navigation {
+	display: flex;
+
+	@include media-tablet {
+		display: none;
+	}
+}
+
+.navigation-item {
+	margin-right: 35px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@include media-random(1115px) {
+		font-size: 1.5rem;
+	}
+}
+
+.navigation-a {
+	@include font('Arial', normal, 1.5rem, 2.4rem, 0.1px);
+	color: $color-dark-s;
+
+	&:hover {
+		color: $color-light-s;
+	}
+}
+
+.navigation-a-active {
+	@include font('Arial', normal, 1.5rem, 160%, 0px);
+	color: $color-light-s;
+	border-bottom: 3px solid $color-primary;
+}

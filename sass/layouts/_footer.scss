@@ -1,0 +1,137 @@
+footer {
+	background: url(../assets/images/noise_transparent@2x.png),
+		radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%),
+		#211F20;
+
+	h3 {
+		color: $color-light-xl;
+		margin-top: 15px;
+
+		@include media-laptop {
+			margin-top: 0;
+		}
+	}
+}
+
+.footer__wrapper {
+	padding: 40px 40px 0;
+
+	@include media-laptop {
+		padding: 30px 30px 0;
+	}
+
+	@include media-tablet {
+		padding: 30px 10px 0;
+	}
+}
+
+.footer__content {
+	@extend %flex-between;
+
+	span {
+		color: $color-primary;
+	}
+
+	a {
+		text-decoration: none;
+		color: $color-primary;
+	}
+
+	@include media-laptop {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		img {
+			width: 300px;
+			height: 310px;
+			margin: 0 30%;
+		}
+	}
+
+	@include media-tablet {
+		flex-direction: column;
+	}
+
+	img {
+		@include media-tablet {
+			margin: 0 auto;
+		}
+
+		@include media-random(500px) {
+			width: 260px;
+			height: 100%;
+		}
+	}
+}
+
+.contacts {
+	max-width: 285px;
+
+	@include media-laptop {
+		row-gap: 40px;
+
+		.contats-item {
+			height: 32px;
+		}
+	}
+}
+
+.location {
+	max-width: 302px;
+
+	@include media-tablet {
+		row-gap: 40px !important;
+	}
+}
+
+.content-item {
+	@extend %flex-column-between;
+	padding-bottom: 60px;
+
+	@include media-laptop {
+		margin: 0 30px;
+		//padding-bottom: 30px;
+	}
+
+	@include media-tablet {
+		row-gap: 37px;
+		margin: 0 auto;
+	}
+
+	@include media-random(500px) {
+		padding-bottom: 37px;
+	}
+}
+
+.footer-item {
+	display: flex;
+	@include font('Georgia', normal, 2rem, 115%, 0.06em);
+}
+
+.email-text {
+	background-image: url("../assets/icons/mail.svg");
+	@extend %footer-icon-alight;
+	align-self: center;
+
+	@include media-random(500px) {
+		margin-left: 12px;
+	}
+}
+
+.tel-text {
+	background-image: url("../assets/icons/phone.svg");
+	@extend %footer-icon-alight;
+
+	@include media-random(500px) {
+		margin-left: 18px;
+	}
+
+	//align-self: center;
+}
+
+.location-text {
+	background-image: url("../assets/icons/pin.svg");
+	@extend %footer-icon-alight;
+	padding-left: 40px;
+	align-self: center;
+}

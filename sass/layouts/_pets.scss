@@ -1,0 +1,178 @@
+.pets {
+	background-color: $color-light-l;
+}
+
+.pets__wrapper {
+	padding: 80px 40px 100px;
+
+	@include media-laptop {
+		padding: 80px 0 100px;
+	}
+
+	@include media-random(500px) {
+		padding: 42px 10px;
+	}
+}
+
+.pets__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.h3__pets {
+	text-align: center;
+}
+
+.pets__title {
+	@include font('Georgia', normal, 2rem, 2.3rem, 1.2px);
+	text-align: center;
+	margin: 30px 0;
+}
+
+.pets-card {
+	min-width: 270px;
+	min-height: 435px;
+	border-radius: 10px;
+	padding-bottom: 30px;
+	background-color: $color-light-s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+	&:hover {
+		cursor: pointer;
+		background-color: $color-light-xl;
+		box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+		.button__bordered {
+			background-color: $color-primary-light;
+			border: 2px solid $color-primary-light;
+		}
+	}
+}
+
+.main-pets-card {
+	&:nth-child(3) {
+		@include media-laptop {
+			display: none;
+		}
+	}
+
+	&:nth-child(2) {
+		@include media-tablet {
+			display: none;
+		}
+	}
+}
+
+.pets-card__container {
+
+	max-width: 990px;
+	margin: 0 8px;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+
+	//@include borders(5px, green);
+
+	@include media-laptop {
+		justify-content: center;
+		column-gap: 40px;
+		width: 580px;
+		margin: 0 12px;
+	}
+
+	@include media-tablet {
+		width: 270px;
+		margin: 0 calc((100% - 344px)/4);
+	}
+
+	@include media-random(500px) {
+		order: 1;
+		margin: 0 auto;
+	}
+}
+
+.pets__slider {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 60px auto;
+	width: 1200px;
+	justify-content: space-between;
+
+
+	@include media-laptop {
+		max-width: 94%;
+		justify-content: center;
+	}
+
+	@include media-random(500px) {
+		margin: 42px auto;
+
+	}
+}
+
+.arrow-left {
+	@include media-random(500px) {
+		order: 2;
+	}
+}
+
+.arrow-right {
+	@include media-random(500px) {
+		order: 3;
+	}
+}
+
+.slider-screen-left,
+.slider-screen-active,
+.slider-screen-right {
+
+	display: flex;
+	flex-direction: row;
+	width: 1200px;
+	gap: 90px;
+
+}
+
+.slider__container {
+	display: flex;
+	position: relative;
+	left: -1080px;
+	gap: 90px;
+}
+
+@keyframes move-left {
+	from {
+		left: -1080px;
+	}
+
+	to {
+		left: 0;
+	}
+}
+
+@keyframes move-right {
+	from {
+		left: -1080px;
+	}
+
+	to {
+		left: -2160px;
+	}
+}
+
+.transition-left {
+	animation-name: move-left;
+	animation-duration: 2s;
+	transition: all 1s ease-in;
+}
+
+.transition-right {
+	animation-name: move-right;
+	animation-duration: 2s;
+	transition: all 0.2s ease-in;
+}

@@ -1,0 +1,40 @@
+.header__wrapper {
+	@extend %flex-between;
+	align-items: center;
+	padding: 60px 40px;
+
+	@include media-laptop {
+		width: calc(100%);
+		padding: 30px;
+	}
+
+
+
+	@include media-tablet {
+		max-width: calc(100% - 46px);
+	}
+
+	@include media-mobile {
+
+		padding: 30px 30px 10px 0;
+		max-width: calc(100% - 33px);
+		margin-left: 10px;
+	}
+}
+
+.logo-item {
+	@include font('Arial', normal, 1.3rem, 1.5rem, 1.3px);
+	color: $color-light-xl;
+	text-align: center;
+}
+
+
+.logo {
+	@extend %flex-column-between;
+	height: 60px;
+}
+
+.header {
+	width: 100%;
+	position: absolute;
+}

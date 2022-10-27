@@ -1,0 +1,153 @@
+.modal__wrapper {
+	display: none;
+}
+
+.modal__wrapper-active {
+	display: block;
+}
+
+.modal__button {
+	cursor: pointer;
+	position: fixed;
+	right: calc(50% - 495px);
+	top: calc(50% - 250px - 52px);
+
+	@include media-laptop {
+		right: calc(50% - 355px);
+		top: calc(50% - 210px);
+	}
+
+	@include media-tablet {
+		right: calc(50% - 121px - 30px);
+	}
+}
+
+.modal__container {
+	width: 900px;
+	top: calc(50% - 250px);
+	left: calc(50% - 450px);
+
+	@include media-laptop {
+		width: 630px;
+		top: calc(50% - 160px);
+		left: calc(50% - 315px);
+	}
+
+	@include media-tablet {
+		width: 240px;
+		top: calc(50% - 160px);
+		left: calc(50% - 121px);
+	}
+
+	position: fixed;
+	z-index: 1000;
+
+	background-color: $color-light-xl;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	overflow: hidden;
+
+	&:hover {
+		box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+	}
+}
+
+.modal__content {
+	padding: 50px 20px 88px 30px;
+
+	@include media-laptop {
+		padding: 10px 8px 37px 11px;
+	}
+
+	@include media-tablet {
+		padding: 10px;
+	}
+
+}
+
+.modal__img {
+	@include media-laptop {
+		width: 350px;
+		height: 350px;
+	}
+
+	@include media-tablet {
+		display: none;
+	}
+
+	width: 500px;
+	height: 500px;
+	object-fit: cover;
+}
+
+.modal__name {
+	padding-bottom: 10px;
+}
+
+.modal__breed {
+	@include font("Georgia", normal, 2rem, 115%, 0.06em);
+
+	@include media-tablet {
+		text-align: center;
+	}
+}
+
+.modal__description {
+	@include font('Georgia', normal, 1.5rem, 115%, 0.06em);
+	padding: 40px 0;
+
+	@include media-laptop {
+		@include font('Georgia', normal, 1.3rem, 108%, 0.06em);
+		padding: 20px 0;
+	}
+
+}
+
+.modal__list {
+	row-gap: 10px;
+
+	@include media-laptop {
+		row-gap: 4px;
+		width: 260px;
+	}
+
+	@include media-tablet {
+		width: 220px;
+	}
+
+	padding-left: 14px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+
+}
+
+.modal__item {
+	position: relative;
+}
+
+.modal__item::before {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 5px;
+	background-color: $color-primary;
+	border-radius: 50%;
+	top: 7px;
+	left: -14px;
+	overflow: hidden;
+}
+
+
+
+.modal__item__title {
+	@include font('Georgia', normal, 1.5rem, 110%, 0.2rem);
+	font-weight: 700;
+}
+
+.modal__item__text {
+	padding-left: 5px;
+	letter-spacing: 0.2rem;
+}

@@ -1,0 +1,99 @@
+.button {
+	display: block;
+	box-sizing: border-box;
+	width: 207px;
+	height: 52px;
+	border-radius: 100px;
+	@include font("Georgia", normal, 1.7rem, 2.5rem, 0.9px);
+	text-align: center;
+	border-style: none;
+	padding-top: 2px;
+	cursor: pointer;
+}
+
+.button__colored {
+	background-color: $color-primary;
+	color: $color-dark-3xl;
+
+	&:hover {
+		background-color: $color-primary-light;
+	}
+}
+
+.button__bordered {
+	background-color: transparent;
+	border: 2px solid $color-primary;
+
+	&:hover {
+		background-color: $color-primary-light;
+		border: 2px solid $color-primary-light;
+	}
+}
+
+.button__primary {
+	width: 261px;
+	margin: 0 auto;
+}
+
+.button-arrow {
+	box-sizing: border-box;
+	display: inline-block;
+	min-width: 52px;
+	height: 52px;
+	border: 2px solid $color-primary;
+	border-radius: 50%;
+	align-self: center;
+	text-align: center;
+	padding-top: 15px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-primary-light;
+		border: 2px solid $color-primary-light;
+	}
+
+	@include media-random(500px) {
+		margin: 15px calc((50% - 62px)/2) 0;
+	}
+}
+
+
+.button-our-pets {
+	width: 187px;
+}
+
+.button__pets {
+	width: 187px;
+}
+
+.button-pagination-inactive {
+	border: 2px solid $color-dark-s;
+	color: $color-dark-s;
+
+	&:hover {
+		border: 2px solid $color-dark-s;
+		color: $color-dark-s;
+		background-color: transparent;
+		cursor: default;
+	}
+}
+
+.button-pagination-active {
+	border: 2px solid $color-primary;
+	color: $color-dark-3xl;
+}
+
+.button-pagination-center {
+	background-color: $color-primary;
+
+	&:hover {
+		background-color: $color-primary;
+		cursor: default;
+	}
+}
+
+.modal__button {
+	background-image: url('../assets/icons/close.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}

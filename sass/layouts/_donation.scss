@@ -1,0 +1,126 @@
+.donation {
+	background-color: $color-light-l;
+
+	img {
+		margin: 11px 0;
+
+		@include media-laptop {
+			margin: 60px auto 0;
+		}
+
+		@include media-random(706px) {
+			margin: 42px auto 0;
+			width: 71.6%;
+			height: 100%;
+		}
+
+		@include media-random(383px) {
+			width: 260px;
+			height: 100%;
+		}
+	}
+}
+
+.donation__wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 182px 100px;
+
+	@include media-laptop {
+		padding: 80px 0 100px;
+	}
+
+	@include media-tablet {
+		padding: 42px 10px 42px;
+	}
+
+}
+
+.donation__container {
+	@extend %flex-between;
+	width: 100%;
+
+	@include media-laptop {
+		justify-content: center;
+	}
+
+	@include media-laptop {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
+
+.donation__content {
+	max-width: 380px;
+	@extend %flex-column-between;
+
+	//@include borders(red);
+	@include media-laptop {
+		padding-left: 30px;
+	}
+
+	@include media-laptop {
+		padding-left: 0;
+		row-gap: 20px;
+	}
+
+	@include media-tablet {
+		align-items: center;
+		row-gap: 22px;
+	}
+}
+
+.donation__subheading {
+	@include font('Georgia', normal, 1.5rem, 110%, 0.06em);
+	display: flex;
+	align-items: center;
+
+	@include media-random(500px) {
+		letter-spacing: 0;
+	}
+}
+
+.donation-credit-card {
+	@include font('Georgia', normal, 2rem, 115%, 0.06em);
+	background-color: $color-primary;
+	@extend %flex-between;
+	align-items: center;
+	letter-spacing: 0.06em;
+	padding: 8px 15px;
+	border-radius: 9px;
+	width: 349px;
+	margin-top: 7px;
+
+	@include media-laptop {
+		margin-top: 0;
+	}
+
+	@include media-random(500px) {
+		@include font('Georgia', normal, 1.5rem, 110%, 0.06em);
+		width: 281px;
+	}
+
+	&:hover {
+		box-shadow: 0px 2px 15px 5px rgba(13, 13, 13, 0.15);
+		cursor: pointer;
+	}
+
+	a {
+		color: $color-dark-l;
+	}
+}
+
+.donation-text {
+	@include font('Arial', italic, 1.2rem, 150%, 0px);
+	display: flex;
+	align-items: center;
+	color: $color-dark-m;
+
+	@include media-tablet {
+		text-align: justify;
+	}
+
+	@include media-random(500px) {
+		width: 281px;
+	}
+}

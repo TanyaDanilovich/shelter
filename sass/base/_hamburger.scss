@@ -1,0 +1,59 @@
+.hamburger {
+	z-index: 5;
+	display: inline-block;
+	height: 22px;
+	width: 30px;
+	position: absolute;
+	display: none;
+	left: calc(100% - 83px);
+
+	top: 50px;
+
+	@include media-tablet {
+		display: block;
+	}
+
+	&:before {
+		@extend %hamburger-line;
+		top: 0;
+		left: 0;
+	}
+
+	&:after {
+		@extend %hamburger-line;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.hamburger__line {
+	@extend %hamburger-line;
+	top: calc(50% - 1px);
+	left: 0;
+}
+
+%hamburger-line {
+	content: "";
+	background-color: $color-primary;
+	display: inline-block;
+	height: 2px;
+	width: 100%;
+	position: absolute;
+}
+
+.hamburger__line-dark {
+	background-color: $color-dark-3xl;
+}
+
+.hamburger-dark {
+
+	&:before,
+	&:after {
+		background-color: $color-dark-3xl;
+	}
+}
+
+.hamburger-rotate {
+	transform: rotate(90deg);
+	transition: all 1s;
+}

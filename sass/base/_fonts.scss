@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Arial';
+	src: url('../assets/fonts/arial-regular-webfont.woff2'),
+		url('../assets/fonts/arial-regular-webfont.woff');
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Georgia';
+	src: url('../assets/fonts/Georgia.woff2') format('woff2'),
+		url('../assets/fonts/Georgia.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
